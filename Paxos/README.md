@@ -1,3 +1,5 @@
+# Paxos 算法
+
 ## 任务描述
 根据 Paxos 算法流程完成相关核心成员函数设计。
 
@@ -44,3 +46,6 @@ Learner：Acceptor 告诉 Learner 哪个 value 被选定，Learner 就认为那�
 ```
 最终通过提议值为：5
 ```
+
+## 本地测试
+运行脚本 `./1.sh` 即可测试, Paxos 运行的全部输出在 `/root/out.txt` 文件中.
