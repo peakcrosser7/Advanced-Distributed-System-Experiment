@@ -27,7 +27,7 @@ Acceptor ：只要 Acceptor 接受了某个提案，Acceptor 就认为该提案�
 Learner：Acceptor 告诉 Learner 哪个 value 被选定，Learner 就认为那个 value 被选定。
 
 ## 编程要求
-根据提示，在右侧编辑器中的 begin-end 间补充代码，根据 Paxos 算法流程完成 Proposer.cpp 和 Acceptor.cpp 中 Proposer 和 Acceptor 类的核心成员函数设计。
+根据提示，在右侧编辑器中的 begin-end 间补充代码，根据 Paxos 算法流程完成 `Proposer.cpp` 和 `Acceptor.cpp` 中 `Proposer` 和 `Acceptor` 类的核心成员函数设计。
 
 ## 测试说明
 后台会自动检测你的输出结果，当与预期输出一致时，则算通关。
