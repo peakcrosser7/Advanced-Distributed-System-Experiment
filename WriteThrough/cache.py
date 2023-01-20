@@ -78,13 +78,19 @@ class sim_cache:
         ####### Begin #######
         
         #检查缓存中是否已缓存文件
-
-        #向server确认version是否一致
-
-        #选择从cache/server中读取文件
+        cache_file = self._read_cache(target_file)
+        if cache_file is not None:
+            _, data, version = cache_file
+            #向server确认version是否一致
+            if self._target_server.get_version(target_file) == version:
+            #选择从cache/server中读取文件
+                return data
 
         #缓存从server中读取的文件
-
+        _, data, version = self._target_server.read(target_file)
+        self._write_cache(target_file, data, version)
+        return data
+        
         ######## End ########
 
         # there is no file in the system
@@ -95,10 +101,13 @@ class sim_cache:
         ####### Begin #######
 
         #生成新version
+        version = self._get_new_version()
 
         #向cache中写入数据并更新version
+        self._write_cache(target_file, data, version)
 
         #向server中写入数据并更新version
+        self._target_server.write(target_file, data, version)
 
         ######## End ########
 
