@@ -2,7 +2,7 @@
 HUST, CS, 2022 Advanced Distributed System, Course lab assignments
 
 ## 实验环境
-课程实训环境为在线答题网站[educoder](https://www.educoder.net/).  
+课程实训环境为在线答题网站 [educoder](https://www.educoder.net/).  
 
 Paxos 实验需运行在 Linux 环境; WriteThrough 实验只需 Python 环境, Windows 或 Linux 均可.  
 
